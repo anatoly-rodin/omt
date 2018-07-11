@@ -1,0 +1,27 @@
+@import "variables";
+
+@mixin size() {
+	width: 41px;
+	height: 41px;
+}
+.icon {
+	&-circle {
+		display: inline-flex;
+		align-content: center;
+		justify-content: center;
+		align-items: center;
+		@include size();
+		font-family: "ProximaNovaCond-Regular", sans-serif;
+		font-size: $size-text-default;
+		color: $text-color-white;
+		border-radius: 50%;
+		border: 2px solid $color-white;
+		cursor: pointer;
+		overflow: hidden;
+	}
+
+	&-telegram {
+		border: 0;
+		background: url("../images/icons/telegram.svg") no-repeat center;
+	}
+}

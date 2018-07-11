@@ -33,6 +33,9 @@
     "sass-loader": "^5.0.1",
     "style-loader": "^0.18.2",
     "webpack": "^3.5.5",
-    "webpack-dev-server": "^2.7.1"
+    "webpack-dev-server": "^2.7.1",
+    "svg-url-loader": "^2.3.2",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "url-loader": "^1.0.1"
   }
 }
