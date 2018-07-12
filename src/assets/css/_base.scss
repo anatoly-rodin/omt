@@ -5,14 +5,58 @@ body {
 .logo {
 	width: 217px;
 	img {
+		display: block;
 		max-width: 100%;
 		height: auto;
 	}
 }
 .social {
+	height: 41px;
 	.list {
+		height: inherit;
 		li + li {
 			margin-left: 10px;
+		}
+	}
+}
+.menu {
+	color: $color-white;
+	.list--inline {
+		li + li {
+			margin-left: 35px;
+		}
+	}
+}
+
+.timer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 465px;
+	padding: 50px 35px 35px;
+	background-color: #241719;
+	border-radius: 10px;
+}
+.subscribe {
+	display: flex;
+	align-items: center;
+	height: 41px;
+	&__input {
+		height: 100%;
+		margin-right: -25px;
+		padding: 0 0 0 25px;
+		background-color: $color-dark-blue;
+		color: $text-color-white;
+		border-radius: 30px 0 0 30px;
+		input {
+			height: 100%;
+			border: none;
+			outline: none;
+			background-color: transparent;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
 		}
 	}
 }
@@ -34,12 +78,28 @@ body {
 		margin-right: 30px;
 	}
 }
+.footer {
+	padding: 58px 0 37px 0;
+	background-color: $color-bg-footer;
+	.row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__social {
+		display: flex;
+	}
+	.btn {
+		margin-left: 35px;
+	}
+}
 
-.menu {
-	color: $color-white;
-	.list--inline {
-		li + li {
-			margin-left: 35px;
+#about {
+	.buttons-list {
+		margin: 50px 0;
+		.btn + .btn {
+			margin-left: 15px;
 		}
 	}
 }
+

@@ -10,20 +10,6 @@ module.exports = {
 	},
 	module: {
 		rules: [
-			{
-				test: /\.vue$/,
-				loader: 'vue-loader',
-				options: {
-					loaders: {
-						// Since sass-loader (weirdly) has SCSS as its default parse mode, we map
-						// the "scss" and "sass" values for the lang attribute to the right configs here.
-						// other preprocessors should work out of the box, no loader config like this necessary.
-						'scss': 'vue-style-loader!css-loader!sass-loader',
-						'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
-					}
-					// other vue-loader options go here
-				}
-			},
 			// JS
 			{
 				test: /\.js$/,
@@ -40,22 +26,34 @@ module.exports = {
 			{
 				test: /\.(scss|css)$/,
 				use: [
-					'style-loader',
-					'css-loader',
-					'sass-loader'
+				    {
+                        loader: 'style-loader'
+                    },
+                    {
+                        loader: 'css-loader'
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            includePaths: ["absolute/path/a", "absolute/path/b"]
+                        }
+                    }
+					
 				]
 			},
 			// Images
-			{
-				test: /\.(png|jpg|gif|svg)$/,
-				loader: 'file-loader',
-				options: {
-					name: '[name].[ext]'
-				}
-			},
+            {
+                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+                use: {
+                    loader: 'svg-url-loader',
+                    options: {
+                        name: 'images/[name].[ext]',
+                    },
+                },
+            },
 			// Fonts
 			{
-				test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
+				test: /\.(woff|woff2|eot|ttf|otf)$/,
 				loader: 'file-loader',
 				options: {
 					name: '[name].[ext]'

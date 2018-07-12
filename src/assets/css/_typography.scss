@@ -25,11 +25,15 @@ h2 {
 .subheading {
 	font-family: "ProximaNovaCond-Regular", sans-serif;
 	font-size: 24px;
-	color: $color-white;
+	color: $text-color-white;
 }
 .text {
-	font-family: "ProximaNovaCond-Bold", sans-serif;
+	font-family: "ProximaNovaCond-Regular", sans-serif;
 	font-size: 16px;
+	color: $text-color-white;
+	&--bold {
+		font-family: "ProximaNovaCond-Bold", sans-serif;
+	}
 	&--big {
 		font-size: 24px;
 	}
