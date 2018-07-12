@@ -18,10 +18,16 @@
 		border: 2px solid $color-white;
 		cursor: pointer;
 		overflow: hidden;
+		&--fill {
+			background-color: $color-white;
+		}
 	}
 
 	&-telegram {
 		border: 0;
 		background: url("../images/icons/telegram.svg") no-repeat center;
+	}
+	&-facebook {
+		background: url("../images/icons/facebook.svg") no-repeat center;
 	}
 }
