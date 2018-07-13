@@ -1,6 +1,10 @@
 @import "variables";
+@import "mixins";
 body {
 	background-color: $color-dark-blue;
+}
+[class^="col-"] {
+	padding: 0;
 }
 .logo {
 	width: 217px;
@@ -26,6 +30,24 @@ body {
 			margin-left: 35px;
 		}
 	}
+}
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+span.circle {
+	display: inline-flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	width: 23px;
+	height: 23px;
+	font-family: "ProximaNovaCond-Regular", sans-serif;
+	font-size: 16px;
+	color: $text-color-white;
+	background: $color-red;
+	border-radius: 15px;
 }
 
 .timer {
@@ -58,6 +80,9 @@ body {
 			-moz-appearance: none;
 			appearance: none;
 		}
+	}
+	&--wide {
+		max-width: 460px;
 	}
 }
 
@@ -94,12 +119,31 @@ body {
 	}
 }
 
+section {
+	padding: 55px 0;
+}
 #about {
+	padding-top: 0;
 	.buttons-list {
 		margin: 50px 0;
 		.btn + .btn {
 			margin-left: 15px;
 		}
+	}
+}
+#in90seconds {}
+#solution {
+	@include linear-bg-1();
+	.solution__list {
+		.row + .row {
+			margin-top: 45px;
+		}
+	}
+}
+#singup {
+	@include linear-bg-1();
+	.row + .row {
+		margin-top: 60px;
 	}
 }
 
