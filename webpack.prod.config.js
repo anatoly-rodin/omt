@@ -1,6 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	entry: ['babel-polyfill', './src/main.js'],
@@ -11,17 +13,6 @@ module.exports = {
 	},
 	module: {
 		rules: [
-			{
-				test: /\.vue$/,
-				loader: 'vue-loader',
-				options: {
-					loaders: {
-						'scss': 'vue-style-loader!css-loader!sass-loader',
-						'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
-					},
-					postcss: [require('autoprefixer')()]
-				}
-			},
 			{
 				test: /\.js$/,
 				exclude: /(node_modules|bower_components)/,
@@ -44,14 +35,24 @@ module.exports = {
 					]
 				})
 			},
-			// Images
-			{
-				test: /\.(png|svg|jpg|gif)$/,
-				loader: 'file-loader',
-				options: {
-					name: 'assets/images/[name].[ext]'
-				}
-			},
+            // Images
+            {
+                test: /\.(png|jpg|gif)$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: 'assets/images/',
+                    publicPath: 'assets/images/'
+                }
+            },
+            // Images
+            {
+                test: /\.(svg)(\?.*)?$/,
+                use: {
+                    loader: 'svg-url-loader',
+                    options: {},
+                },
+            },
 			// Fonts
 			{
 				test: /\.(woff|woff2|eot|ttf|otf)$/,
@@ -63,8 +64,8 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new ExtractTextPlugin('/assets/omt.min.css', {
-			filename: '/assets/omt.min.css',
+		new ExtractTextPlugin('/assets/css/omt.min.css', {
+			filename: '/assets/css/omt.min.css',
 			disable: false
 		}),
 		new webpack.LoaderOptionsPlugin({
@@ -75,12 +76,17 @@ module.exports = {
 				NODE_ENV: '"production"'
 			}
 		}),
-		new webpack.optimize.UglifyJsPlugin({
-			sourceMap: false,
-			compress: {
-				warnings: false
-			}
-		})
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: 'index.html'
+        }),
+        new CopyWebpackPlugin([
+            {
+                from: 'src/assets/images/',
+                to: 'assets/images/',
+                ignore: ['*.svg']
+            }
+        ])
 	],
 	resolve: {
 		alias: {
