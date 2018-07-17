@@ -3,9 +3,6 @@
 body {
     background-color: $color-dark-blue;
 }
-[class^="col-"] {
-    padding: 0;
-}
 .logo {
     width: 217px;
     img {
@@ -137,7 +134,12 @@ section {
     }
 }
 #in90seconds {}
-#solution {
+.introducing {
+    .plates-list {
+        margin-bottom: 50px;
+    }
+}
+.solution {
     @include linear-bg-1();
 }
 #singup {

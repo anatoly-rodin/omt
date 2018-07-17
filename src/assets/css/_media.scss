@@ -1,0 +1,16 @@
+@media (min-width: 1200px) {
+    .container {
+        padding: 0;
+    }
+    .row {
+        margin: 0;
+    }
+    [class^="col-"] {
+        &:nth-child(1) {
+            padding-left: 0;
+        }
+        &:nth-child(2) {
+            padding-right: 0;
+        }
+    }
+}
