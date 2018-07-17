@@ -58,4 +58,34 @@
         background: url("../images/icons/internet-explorer-white.svg") no-repeat center;
         @include bg-size-small();
     }
+    &-startup {
+        &-red {
+            background: url("../images/icons/startup-red.svg") no-repeat center;
+        }
+        &-purple {
+            background: url("../images/icons/startup-purple.svg") no-repeat center;
+        }
+        @include bg-size();
+    }
+    &-idea {
+        &-red {
+            background: url("../images/icons/idea-red.svg") no-repeat center;
+        }
+        &-white {
+            background: url("../images/icons/idea-white.svg") no-repeat center;
+        }
+        @include bg-size();
+    }
+    &-team {
+        &-red {
+            background: url("../images/icons/team-red.svg") no-repeat center;
+        }
+        @include bg-size();
+    }
+    &-db {
+        &-red {
+            background: url("../images/icons/database-red.svg") no-repeat center;
+        }
+        @include bg-size();
+    }
 }

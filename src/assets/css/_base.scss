@@ -118,6 +118,11 @@ span.circle {
         margin-left: 35px;
     }
 }
+.plates-list {
+    .row + .row {
+        margin-top: 45px;
+    }
+}
 
 section {
     padding: 55px 0;
@@ -134,11 +139,6 @@ section {
 #in90seconds {}
 #solution {
     @include linear-bg-1();
-    .solution__list {
-        .row + .row {
-            margin-top: 45px;
-        }
-    }
 }
 #singup {
     @include linear-bg-1();
