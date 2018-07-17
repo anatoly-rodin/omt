@@ -18,6 +18,7 @@
 }
 .icon {
     &-circle {
+        position: relative;
         justify-content: center;
         align-items: center;
         font-family: "ProximaNovaCond-Regular", sans-serif;
@@ -32,6 +33,11 @@
         }
         &--simple {
             border: 0;
+        }
+        &--big {
+            width: 117px;
+            height: 117px;
+            border-width: 4px;
         }
     }
     &-telegram {
