@@ -6,6 +6,10 @@
 @mixin bg-size-small() {
     background-size: 23px 23px;
 }
+@mixin size-small() {
+    width: 25px;
+    height: 25px;
+}
 [class^='icon-'] {
     position: relative;
     display: inline-flex;
@@ -87,5 +91,14 @@
             background: url("../images/icons/database-red.svg") no-repeat center;
         }
         @include bg-size();
+    }
+    &-arrow {
+        &-down {
+            &-white {
+                background: url("../images/icons/arrow-down-white.svg") no-repeat center;
+                @include size-small();
+                @include bg-size-small();
+            }
+        }
     }
 }

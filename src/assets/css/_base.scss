@@ -1,8 +1,6 @@
 @import "variables";
 @import "mixins";
-body {
-    background-color: $color-dark-blue;
-}
+
 .logo {
     width: 217px;
     img {
@@ -120,7 +118,44 @@ span.circle {
         margin-top: 45px;
     }
 }
+.select {
+    position: relative;
+    width: 100%;
+    padding: 15px 25px;
+    border-radius: 15px;
+    color: $text-color-white;
+    background: $color-dark-blue;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span:nth-child(1) {
+            display: flex;
+            padding-right: 15px;
+        }
+    }
+    &__list {
+        height: 0;
+        opacity: 0;
+    }
+    &:hover {
+        .select__list {
+            height: auto;
+            opacity: 1;
+            padding-top: 15px;
+        }
+        [class^="icon-"] {
+            transform: rotate(180deg);
+        }
+    }
+}
 
+.content-1,
+.content-2 {
+    @include linear-bg-1();
+}
 section {
     padding: 55px 0;
 }
@@ -141,6 +176,14 @@ section {
 }
 .solution {
     @include linear-bg-1();
+}
+.faq {
+    .row:last-child {
+        margin-top: 25px;
+    }
+    .select + .select {
+        margin-top: 20px;
+    }
 }
 #singup {
     @include linear-bg-1();
