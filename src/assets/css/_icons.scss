@@ -1,61 +1,61 @@
 @import "variables";
 
 @mixin bg-size() {
-	background-size: 41px 41px;
+    background-size: 41px 41px;
 }
 @mixin bg-size-small() {
-	background-size: 23px 23px;
+    background-size: 23px 23px;
 }
 [class^='icon-'] {
-	position: relative;
-	display: inline-flex;
-	width: 41px;
-	height: 41px;
+    position: relative;
+    display: inline-flex;
+    width: 41px;
+    height: 41px;
 }
 .icon {
-	&-circle {
-		justify-content: center;
-		align-items: center;
-		font-family: "ProximaNovaCond-Regular", sans-serif;
-		font-size: $size-text-default;
-		color: $text-color-white;
-		border-radius: 50%;
-		border: 2px solid $color-white;
-		cursor: pointer;
-		overflow: hidden;
-		&--fill {
-			background-color: $color-white;
-		}
-		&--simple {
-			border: 0;
-		}
-	}
-	&-telegram {
-		background: url('../images/icons/telegram-red.svg') no-repeat center;
-		@include bg-size();
-	}
-	&-facebook {
-		background: url("../images/icons/facebook-white.svg") no-repeat center;
-		@include bg-size-small();
-	}
-	&-instagram {
-		background: url("../images/icons/instagram-white.svg") no-repeat center;
-		@include bg-size-small();
-	}
-	&-chrome {
-		background: url("../images/icons/chrome-white.svg") no-repeat center;
-		@include bg-size-small();
-	}
-	&-whatsapp {
-		background: url("../images/icons/whatsapp-white.svg") no-repeat center;
-		@include bg-size-small();
-	}
-	&-gplus {
-		background: url("../images/icons/google-plus-white.svg") no-repeat center;
-		@include bg-size-small();
-	}
-	&-explorer {
-		background: url("../images/icons/internet-explorer-white.svg") no-repeat center;
-		@include bg-size-small();
-	}
+    &-circle {
+        justify-content: center;
+        align-items: center;
+        font-family: "ProximaNovaCond-Regular", sans-serif;
+        font-size: $size-text-default;
+        color: $text-color-white;
+        border-radius: 50%;
+        border: 2px solid $color-white;
+        cursor: pointer;
+        overflow: hidden;
+        &--fill {
+            background-color: $color-white;
+        }
+        &--simple {
+            border: 0;
+        }
+    }
+    &-telegram {
+        background: url('../images/icons/telegram-red.svg') no-repeat center;
+        @include bg-size();
+    }
+    &-facebook {
+        background: url("../images/icons/facebook-white.svg") no-repeat center;
+        @include bg-size-small();
+    }
+    &-instagram {
+        background: url("../images/icons/instagram-white.svg") no-repeat center;
+        @include bg-size-small();
+    }
+    &-chrome {
+        background: url("../images/icons/chrome-white.svg") no-repeat center;
+        @include bg-size-small();
+    }
+    &-whatsapp {
+        background: url("../images/icons/whatsapp-white.svg") no-repeat center;
+        @include bg-size-small();
+    }
+    &-gplus {
+        background: url("../images/icons/google-plus-white.svg") no-repeat center;
+        @include bg-size-small();
+    }
+    &-explorer {
+        background: url("../images/icons/internet-explorer-white.svg") no-repeat center;
+        @include bg-size-small();
+    }
 }

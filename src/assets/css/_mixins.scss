@@ -1,8 +1,8 @@
 @mixin linear-bg-1() {
-	background-image: -ms-linear-gradient(right, #282A37 0%, #633B37 100%);
-	background-image: -moz-linear-gradient(right, #282A37 0%, #633B37 100%);
-	background-image: -o-linear-gradient(right, #282A37 0%, #633B37 100%);
-	background-image: -webkit-gradient(linear, right top, left top, color-stop(0, #282A37), color-stop(100, #633B37));
-	background-image: -webkit-linear-gradient(right, #282A37 0%, #633B37 100%);
-	background-image: linear-gradient(to left, #282A37 0%, #633B37 100%);
+    background-image: -ms-linear-gradient(right, #282A37 0%, #633B37 100%);
+    background-image: -moz-linear-gradient(right, #282A37 0%, #633B37 100%);
+    background-image: -o-linear-gradient(right, #282A37 0%, #633B37 100%);
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(0, #282A37), color-stop(100, #633B37));
+    background-image: -webkit-linear-gradient(right, #282A37 0%, #633B37 100%);
+    background-image: linear-gradient(to left, #282A37 0%, #633B37 100%);
 }

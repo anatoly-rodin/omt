@@ -1,73 +1,73 @@
 @import "variables";
 h1,h2,h3,h4 {
-	position: relative;
-	margin: 0;
-	font-family: "ProximaNovaCond-Bold", sans-serif;
-	color: $heading-color;
-	text-transform: uppercase;
+    position: relative;
+    margin: 0;
+    font-family: "ProximaNovaCond-Bold", sans-serif;
+    color: $heading-color;
+    text-transform: uppercase;
 }
 h1 {
-	margin: 40px 0 20px 0;
-	font-size: 40px;
+    margin: 40px 0 20px 0;
+    font-size: 40px;
 }
 h2 {
-	padding: 25px 0;
-	font-size: 36px;
-	&::before {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 60px;
-		height: 2px;
-		content: '';
-		background-color: $color-red;
-	}
+    padding: 25px 0;
+    font-size: 36px;
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60px;
+        height: 2px;
+        content: '';
+        background-color: $color-red;
+    }
 }
 .subheading {
-	font-family: "ProximaNovaCond-Regular", sans-serif;
-	font-size: 24px;
-	color: $text-color-white;
+    font-family: "ProximaNovaCond-Regular", sans-serif;
+    font-size: 24px;
+    color: $text-color-white;
 }
 h2 + .subheading {
-	margin-top: 0;
-	margin-bottom: 60px;
+    margin-top: 0;
+    margin-bottom: 60px;
 }
 h3 {
-	display: inline-flex;
-	align-items: center;
-	font-size: 24px;
-	margin-bottom: 30px;
-	span {
-		margin-right: 35px;
-	}
+    display: inline-flex;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+    span {
+        margin-right: 35px;
+    }
 }
 .text {
-	font-family: "ProximaNovaCond-Regular", sans-serif;
-	font-size: 16px;
-	color: $text-color-white;
-	&--bold {
-		font-family: "ProximaNovaCond-Bold", sans-serif;
-	}
-	&--big {
-		font-size: 24px;
-	}
+    font-family: "ProximaNovaCond-Regular", sans-serif;
+    font-size: 16px;
+    color: $text-color-white;
+    &--bold {
+        font-family: "ProximaNovaCond-Bold", sans-serif;
+    }
+    &--big {
+        font-size: 24px;
+    }
 }
 .list {
-	list-style: none;
-	&--inline {
-		display: flex;
-		margin: 0;
-		padding: 0;
-		li {
-			display: inline-flex;
-			a {
-				color: inherit;
-				text-decoration: none;
-				&:hover {
-					text-decoration: none;
-				}
-			}
-		}
-	}
+    list-style: none;
+    &--inline {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-flex;
+            a {
+                color: inherit;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
 }
 
