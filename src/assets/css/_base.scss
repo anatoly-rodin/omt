@@ -152,9 +152,23 @@ span.circle {
     }
 }
 .employee-card {
-    &__photo {}
-    &__name {}
-    &__pos {}
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    &__photo {
+        display: flex;
+        margin-bottom: 20px;
+    }
+    &__name {
+        font-family: "ProximaNovaCond-Bold", sans-serif;
+        font-size: 24px;
+        color: $text-color-white;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+    &__pos {
+        color: $text-color-red;
+    }
 }
 
 .content-1,
@@ -181,6 +195,16 @@ section {
 }
 .solution {
     @include linear-bg-1();
+}
+.ourteam {
+    &__list {
+        .row {
+            justify-content: space-around;
+        }
+        .row + .row {
+            margin-top: 30px;
+        }
+    }
 }
 .faq {
     .row:last-child {
