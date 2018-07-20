@@ -10,6 +10,13 @@
     width: 25px;
     height: 25px;
 }
+@mixin size-default() {
+    width: 33px;
+    height: 33px;
+}
+@mixin bg-size-default() {
+    background-size: 33px 33px;
+}
 [class^='icon-'] {
     position: relative;
     display: inline-flex;
@@ -106,5 +113,10 @@
                 @include bg-size-small();
             }
         }
+    }
+    &-linkedin {
+        background: url("../images/icons/linkedin.svg") no-repeat center;
+        @include size-default();
+        @include bg-size-default();
     }
 }
