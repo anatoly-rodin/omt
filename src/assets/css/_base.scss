@@ -37,7 +37,9 @@ span.circle {
     align-items: center;
     justify-content: center;
     width: 23px;
+    min-width: 23px;
     height: 23px;
+    min-height: 23px;
     font-family: "ProximaNovaCond-Regular", sans-serif;
     font-size: 16px;
     color: $text-color-white;
@@ -195,6 +197,9 @@ section {
 
 .about {
     padding-top: 0;
+    .row + .row {
+        margin-top: 40px;
+    }
     .buttons-list {
         margin: 50px 0;
         .btn + .btn {
@@ -213,6 +218,45 @@ section {
             font-size: 16px;
             color: $text-color-white;
             text-transform: uppercase;
+        }
+    }
+    &__info {
+        position: relative;
+        padding: 55px 45px;
+        background: $color-white;
+        border-radius: 10px;
+        color: $color-dark-blue;
+        &:before {
+            position: absolute;
+            top: -35px;
+            left: 65px;
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 36.5px 35px 36.5px;
+            border-color: transparent transparent $color-white transparent;
+        }
+        ul:nth-child(1) {
+            font-family: 'ProximaNovaCond-SemiBold', sans-serif;
+            .circle {
+                margin-right: 30px;
+            }
+            li {
+                display: flex;
+            }
+            li + li {
+                margin-top: 25px;
+            }
+        }
+        ul:nth-child(2) {
+            margin: 20px 0 0 0;
+            padding-left: 25px;
+            font-family: 'ProximaNovaCond-Regular', sans-serif;
+            color: $color-red;
+            span {
+                color: $color-dark-blue;
+            }
         }
     }
 }
