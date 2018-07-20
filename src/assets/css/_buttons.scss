@@ -30,4 +30,10 @@
         border: 0;
         background: $color-red;
     }
+    &--white {
+        background-color: $color-white;
+        &:hover {
+            background: $color-white;
+        }
+    }
 }

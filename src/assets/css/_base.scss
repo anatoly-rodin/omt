@@ -97,6 +97,10 @@ span.circle {
     .icon-circle {
         margin-right: 30px;
     }
+    .menu {
+        display: flex;
+        justify-content: flex-end;
+    }
 }
 .footer {
     padding: 58px 0 37px 0;
@@ -188,7 +192,8 @@ span.circle {
 section {
     padding: 55px 0;
 }
-#about {
+
+.about {
     padding-top: 0;
     .buttons-list {
         margin: 50px 0;
@@ -196,11 +201,28 @@ section {
             margin-left: 15px;
         }
     }
+    .icons-list {
+        li + li {
+            margin-left: 30px;
+        }
+        .icon-circle {
+            margin-right: 20px;
+        }
+        span {
+            font-family: "ProximaNovaCond-Bold", sans-serif;
+            font-size: 16px;
+            color: $text-color-white;
+            text-transform: uppercase;
+        }
+    }
 }
 #in90seconds {}
 .introducing {
     .plates-list {
         margin-bottom: 50px;
+        .list {
+            justify-content: space-between;
+        }
     }
 }
 .solution {
