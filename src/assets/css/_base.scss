@@ -47,6 +47,35 @@ span.circle {
     border-radius: 15px;
 }
 
+.countdown {
+    display: flex;
+    &__item {
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 70px;
+            margin-bottom: 15px;
+            font-family: 'ProximaNovaCond-SemiBold', sans-serif;
+            font-size: 36px;
+            background-color: $color-white;
+            border-radius: 10px;
+            color: $color-dark-blue;
+        }
+        span {
+            display: flex;
+            justify-content: center;
+            font-family: 'ProximaNovaCond-Regular', sans-serif;
+            color: $text-color-white;
+        }
+    }
+    &__item + &__item {
+        margin-left: 10px;
+    }
+}
+
 .timer {
     display: flex;
     flex-direction: column;

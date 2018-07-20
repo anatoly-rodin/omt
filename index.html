@@ -74,7 +74,24 @@
                                     <span class="text text--big">Private Sale Starts In</span>
                                 </div>
                                 <div class="timer__counter">
-                                    <img src="src/assets/images/timer.png" alt="">
+                                    <div id="countdown" class="countdown">
+                                        <div class="countdown__item">
+                                            <div id="countdown__days"></div>
+                                            <span>Days</span>
+                                        </div>
+                                        <div class="countdown__item">
+                                            <div id="countdown__hours"></div>
+                                            <span>Hours</span>
+                                        </div>
+                                        <div class="countdown__item">
+                                            <div id="countdown__mins"></div>
+                                            <span>Minutes</span>
+                                        </div>
+                                        <div class="countdown__item">
+                                            <div id="countdown__secs"></div>
+                                            <span>Seconds</span>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="subscribe">
                                     <div class="subscribe__input">
@@ -802,5 +819,6 @@
             </div>
         </div>
         <script defer src="dist/build.js"></script>
+        <script defer src="src/components/countdown.js"></script>
     </body>
 </html>
