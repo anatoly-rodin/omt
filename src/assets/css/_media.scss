@@ -13,7 +13,7 @@
             margin: 40px 0;
         }
         .row + .row {
-            margin-top: 90px;
+            margin-top: 30px;
         }
     }
     .introducing .plates-list .list {
@@ -80,8 +80,11 @@
             margin: 20px 0;
             font-size: 33px;
         }
-        &__info {
+        &__tab {
             padding: 35px;
+        }
+        .row+.row {
+            margin-top: 90px;
         }
     }
     .introducing {
