@@ -125,6 +125,10 @@ span.circle {
     .row:nth-child(2) {
         justify-content: space-between;
     }
+    &__info {
+        display: flex;
+        justify-content: flex-end;
+    }
     .icon-circle {
         margin-right: 30px;
     }
@@ -146,6 +150,10 @@ span.circle {
     }
     .btn {
         margin-left: 35px;
+    }
+    &__info, &__menu {
+        display: flex;
+        justify-content: flex-end;
     }
 }
 .plates-list {
@@ -257,7 +265,7 @@ section {
         color: $color-dark-blue;
         &:before {
             position: absolute;
-            top: -35px;
+            top: -33px;
             left: 65px;
             content: '';
             width: 0;
@@ -295,6 +303,13 @@ section {
         margin-bottom: 50px;
         .list {
             justify-content: space-between;
+        }
+    }
+    &__btn,
+    &__schema {
+        [class^="col-"] {
+            display: flex;
+            justify-content: center;
         }
     }
 }
