@@ -292,12 +292,15 @@ section {
         }
         &-2 {
             &:before {
-                left: 65px;
+                left: 250px;
             }
         }
         &--active {
             display: block;
         }
+    }
+    &__tab-switcher {
+        cursor: pointer;
     }
     &__list-main {
         font-family: 'ProximaNovaCond-SemiBold', sans-serif;

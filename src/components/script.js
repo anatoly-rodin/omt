@@ -4,7 +4,7 @@
         hoursBlock = document.getElementById('countdown__hours'),
         minsBlock = document.getElementById('countdown__mins'),
         secsBlock = document.getElementById('countdown__secs');
-    
+
     let x = setInterval(() => {
         let now = new Date().getTime();
         let distance = countDownDate - now;
@@ -18,4 +18,19 @@
             clearInterval(x);
         }
     }, 1000);
+
+    let tabHeader1 = document.querySelector('.about__tab-switcher-1'),
+        tabHeader2 = document.querySelector('.about__tab-switcher-2'),
+        tab1 = document.querySelector('.about__tab-1'),
+        tab2 = document.querySelector('.about__tab-2');
+
+    tabHeader1.addEventListener('click', function () {
+        tab1.classList.add('about__tab--active');
+        tab2.classList.remove('about__tab--active');
+    });
+
+    tabHeader2.addEventListener('click', function () {
+        tab2.classList.add('about__tab--active');
+        tab1.classList.remove('about__tab--active');
+    });
 })();
