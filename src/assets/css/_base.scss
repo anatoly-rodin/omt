@@ -246,20 +246,6 @@ section {
             margin-left: 15px;
         }
     }
-    .icons-list {
-        li + li {
-            margin-left: 30px;
-        }
-        .icon-circle {
-            margin-right: 20px;
-        }
-        span {
-            font-family: "ProximaNovaCond-Bold", sans-serif;
-            font-size: 16px;
-            color: $text-color-white;
-            text-transform: uppercase;
-        }
-    }
     &__info {
         position: relative;
         padding: 55px 45px;
@@ -277,26 +263,47 @@ section {
             border-width: 0 36.5px 35px 36.5px;
             border-color: transparent transparent $color-white transparent;
         }
-        ul:nth-child(1) {
-            font-family: 'ProximaNovaCond-SemiBold', sans-serif;
-            .circle {
-                margin-right: 30px;
-            }
-            li {
-                display: flex;
-            }
-            li + li {
-                margin-top: 25px;
-            }
+    }
+    .icons-list {
+        position: absolute;
+        top: -85px;
+        display: flex;
+        div {
+            display: flex;
         }
-        ul:nth-child(2) {
-            margin: 20px 0 0 0;
-            padding-left: 25px;
-            font-family: 'ProximaNovaCond-Regular', sans-serif;
-            color: $color-red;
-            span {
-                color: $color-dark-blue;
-            }
+        div + div {
+            align-items: center;
+            margin-left: 30px;
+        }
+        .icon-circle {
+            margin-right: 20px;
+        }
+        span {
+            font-family: "ProximaNovaCond-Bold", sans-serif;
+            font-size: 16px;
+            color: $text-color-white;
+            text-transform: uppercase;
+        }
+    }
+    .about__list-main {
+        font-family: 'ProximaNovaCond-SemiBold', sans-serif;
+        .circle {
+            margin-right: 30px;
+        }
+        li {
+            display: flex;
+        }
+        li + li {
+            margin-top: 25px;
+        }
+    }
+    .about__list-second {
+        margin: 20px 0 0 0;
+        padding-left: 25px;
+        font-family: 'ProximaNovaCond-Regular', sans-serif;
+        color: $color-red;
+        span {
+            color: $color-dark-blue;
         }
     }
 }
@@ -305,6 +312,7 @@ section {
     .plates-list {
         margin-bottom: 50px;
         .list {
+            display: flex;
             justify-content: space-between;
         }
     }
