@@ -151,6 +151,9 @@ span.circle {
     .btn {
         margin-left: 35px;
     }
+    &__logo, &__copy {
+        display: flex;
+    }
     &__info, &__menu {
         display: flex;
         justify-content: flex-end;
@@ -343,4 +346,3 @@ section {
         margin-top: 60px;
     }
 }
-
