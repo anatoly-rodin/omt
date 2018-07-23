@@ -214,6 +214,9 @@ span.circle {
         position: relative;
         display: flex;
         margin-bottom: 20px;
+        img {
+            max-width: 100%;
+        }
     }
     &__name {
         font-family: "ProximaNovaCond-Bold", sans-serif;
