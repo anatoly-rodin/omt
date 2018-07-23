@@ -32,11 +32,13 @@
     }
     &--white {
         background-color: $color-white;
+        color: $color-dark-blue;
         &:hover {
             background: $color-white;
         }
     }
     &--small {
         width: 160px;
+        font-size: 14px;
     }
 }
