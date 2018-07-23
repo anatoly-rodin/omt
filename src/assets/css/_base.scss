@@ -327,11 +327,16 @@ section {
 #in90seconds {}
 .introducing {
     .plates-list {
-        margin-bottom: 50px;
         .list {
             display: flex;
             justify-content: space-between;
         }
+    }
+}
+.liquidity {
+    background-color: #f1f1f1;
+    h2, .subheading {
+        color: $color-dark-blue;
     }
     &__btn,
     &__schema {
@@ -340,9 +345,9 @@ section {
             justify-content: center;
         }
     }
-}
-.solution {
-    @include linear-bg-1();
+    &__schema + &__schema {
+        margin-top: 40px;
+    }
 }
 .ourteam {
     &__list {
@@ -366,7 +371,10 @@ section {
     }
 }
 #singup {
-    @include linear-bg-1();
+    h2, .subheading {
+        color: $color-dark-blue;
+    }
+    background-color: #f1f1f1;
     .row + .row {
         margin-top: 60px;
     }
