@@ -1,6 +1,9 @@
 @import "variables";
 @import "mixins";
 
+body {
+    background-color: $color-dark-blue;
+}
 .logo {
     width: 217px;
     img {
@@ -158,6 +161,22 @@ span.circle {
         display: flex;
         justify-content: flex-end;
     }
+    &__policy {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+        font-family: "ProximaNovaCond-Regular", sans-serif;
+        .list {
+            display: flex;
+            text-transform: uppercase;
+            li + li {
+                margin-left: 30px;
+            }
+            a {
+                color: $text-color-white;
+            }
+        }
+    }
 }
 .plates-list {
     .row + .row {
@@ -170,7 +189,7 @@ span.circle {
     padding: 15px 25px;
     border-radius: 15px;
     color: $text-color-white;
-    background: $color-dark-blue;
+    background: $color-darker-blue;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     &__header {
@@ -195,6 +214,34 @@ span.circle {
         }
         [class^="icon-"] {
             transform: rotate(180deg);
+        }
+    }
+}
+.card {
+    position: relative;
+    width: 100%;
+    height: 225px;
+    padding: 45px 35px;
+    border-radius: 10px;
+    color: $text-color-white;
+    background: $color-darker-blue;
+    .list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+    .table {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        &__row {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__cell {
+            width: 50%;
         }
     }
 }
@@ -230,9 +277,10 @@ span.circle {
     }
 }
 
-.content-1,
-.content-2 {
-    @include linear-bg-1();
+.content-1 {
+    background: url("../images/body-bg.png") no-repeat top right;
+    -webkit-background-size: 65%;
+    background-size: 65%;
 }
 section {
     padding: 55px 0;

@@ -123,7 +123,7 @@
             justify-content: center;
             margin-bottom: 15px;
         }
-        &__menu, &__info, &__copy {
+        &__menu, &__info, &__copy, &__policy {
             justify-content: center;
         }
     }
@@ -144,7 +144,7 @@
                 margin-bottom: 20px;
             }
             .btn {
-                margin: 0;
+                margin-left: 10px;
             }
         }
     }
