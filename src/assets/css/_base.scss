@@ -352,6 +352,13 @@ section {
         margin-top: 40px;
     }
 }
+.token-sale {
+    position: relative;
+    &__schema {
+        display: flex;
+        justify-content: center;
+    }
+}
 .ourteam {
     &__list {
         .row {
