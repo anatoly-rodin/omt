@@ -3,11 +3,12 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
     entry: ['babel-polyfill', './src/main.js'],
     output: {
-        filename: 'bundle.js',
+        filename: 'omt.min.js',
         publicPath: '/',
         path: __dirname + '/dist'
     },
@@ -85,8 +86,13 @@ module.exports = {
                 from: 'src/assets/images/',
                 to: 'assets/images/',
                 ignore: ['*.svg']
+            },
+            {
+                from: 'src/assets/js/',
+                to: 'assets/js/'
             }
-        ])
+        ]),
+        new UglifyJsPlugin()
     ],
     resolve: {
         alias: {
