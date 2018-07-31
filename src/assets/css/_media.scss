@@ -7,6 +7,10 @@
             margin-bottom: 40px;
         }
     }
+    .content-1 {
+        -webkit-background-size: contain;
+        background-size: contain;
+    }
     .about {
         .buttons-list {
             display: flex;
@@ -18,6 +22,11 @@
     }
     .introducing .plates-list .list {
         display: flex;
+        flex-wrap: wrap;
+        li {
+            width: 100%;
+            margin-bottom: 10px;
+        }
     }
     .plates-list {
         .btn {
@@ -96,9 +105,12 @@
             .row+.row {
                 margin-top: 10px;
             }
-        }
-        .list {
-            display: flex;
+            .list {
+                display: flex;
+                li {
+                    width: auto;
+                }
+            }
         }
         &__schema {
             img {

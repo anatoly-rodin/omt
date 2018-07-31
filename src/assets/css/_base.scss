@@ -49,6 +49,20 @@ span.circle {
     background: $color-red;
     border-radius: 15px;
 }
+.rotate {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.mailto {
+    color: $color-red;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
 
 .countdown {
     display: flex;
@@ -203,18 +217,8 @@ span.circle {
         }
     }
     &__list {
-        height: 0;
-        opacity: 0;
-    }
-    &:hover {
-        .select__list {
-            height: auto;
-            opacity: 1;
-            padding-top: 15px;
-        }
-        [class^="icon-"] {
-            transform: rotate(180deg);
-        }
+        display: none;
+        margin-top: 25px;
     }
 }
 .card {
@@ -278,9 +282,12 @@ span.circle {
 }
 
 .content-1 {
-    background: url("../images/body-bg.png") no-repeat top right;
     -webkit-background-size: 65%;
     background-size: 65%;
+    background: url("../images/body-bg.png") no-repeat top right, linear-gradient(45deg, #643724 0%, #201c24 13%, #181c24 73%, #5d3424 100%);
+}
+.content-2 {
+    background: linear-gradient(45deg, #643724 0%, #201c24 13%, #181c24 83%, #5d3424 100%);
 }
 section {
     padding: 55px 0;
