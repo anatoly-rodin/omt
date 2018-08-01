@@ -100,7 +100,7 @@ span.circle {
     align-items: center;
     height: 465px;
     padding: 50px 35px 35px;
-    background-color: #241719;
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
 }
 .subscribe {
@@ -284,10 +284,10 @@ span.circle {
 .content-1 {
     -webkit-background-size: 65%;
     background-size: 65%;
-    background: url("../images/body-bg.png") no-repeat top right, linear-gradient(45deg, #643724 0%, #201c24 13%, #181c24 73%, #5d3424 100%);
+    background: url("../images/body-bg.png") no-repeat top right, linear-gradient(45deg, #623724 0%, #201c24 13%, #181c24 83%, #623724 100%);
 }
 .content-2 {
-    background: linear-gradient(45deg, #643724 0%, #201c24 13%, #181c24 83%, #5d3424 100%);
+    background: linear-gradient(45deg, #623724 0%, #201c24 13%, #181c24 83%, #623724 100%);
 }
 section {
     padding: 55px 0;
